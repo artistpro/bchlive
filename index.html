@@ -370,7 +370,131 @@
         html {
             scroll-behavior: smooth;
         }
-    </style>
+   /* Budget Section Styles */
+        .funding-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .stat-number.orange {
+            color: #f59e0b;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .progress-container {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 40px 0 60px;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .progress-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .progress-percentage {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 16px;
+            background: #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #f59e0b);
+            border-radius: 8px;
+            transition: width 2s ease-out;
+        }
+
+        .budget-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .breakdown-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .breakdown-item:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .breakdown-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .breakdown-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .breakdown-amount {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+
+        .breakdown-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        } </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -476,11 +600,79 @@
 
     <!-- Placeholder sections -->
     <section id="budget" class="section">
-        <div class="container">
-            <h2 class="section-title">Budget & Funding</h2>
-            <p class="section-description">Transparent funding breakdown for BCH Live - Coming Soon</p>
+    <div class="container">
+        <h2 class="section-title" id="budget-title">Transparent Budget</h2>
+        <p class="section-description" id="budget-description">
+            Every BCH counts. Here's exactly how we'll use your investment for BCH Live:
+        </p>
+        
+        <!-- Funding Counter -->
+        <div class="funding-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="current-bch">5.2 BCH</div>
+                <div class="stat-label" id="raised-label">Raised</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number orange">33 BCH</div>
+                <div class="stat-label" id="goal-label">Funding Goal</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">28</div>
+                <div class="stat-label" id="backers-label">Supporters</div>
+            </div>
         </div>
-    </section>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-info">
+                <span class="progress-label">Progress</span>
+                <span class="progress-percentage">15.8%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 15.8%"></div>
+            </div>
+        </div>
+
+        <!-- Budget Breakdown -->
+        <div class="budget-breakdown">
+            <div class="breakdown-item">
+                <div class="breakdown-header">
+                    <h3>Streaming Infrastructure</h3>
+                    <span class="breakdown-amount">8.2 BCH</span>
+                </div>
+                <p class="breakdown-description">VPS, Ant Media Server, storage for 24/7 streaming</p>
+            </div>
+            <div class="breakdown-item">
+                <div class="breakdown-header">
+                    <h3>Content Production</h3>
+                    <span class="breakdown-amount">11.5 BCH</span>
+                </div>
+                <p class="breakdown-description">Music, videos, educational content creation</p>
+            </div>
+            <div class="breakdown-item">
+                <div class="breakdown-header">
+                    <h3>Marketing & Social Media</h3>
+                    <span class="breakdown-amount">8.2 BCH</span>
+                </div>
+                <p class="breakdown-description">Promotion across platforms for BCH Live</p>
+            </div>
+            <div class="breakdown-item">
+                <div class="breakdown-header">
+                    <h3>Management (15%)</h3>
+                    <span class="breakdown-amount">4.3 BCH</span>
+                </div>
+                <p class="breakdown-description">Project coordination & reports</p>
+            </div>
+            <div class="breakdown-item">
+                <div class="breakdown-header">
+                    <h3>Initial Setup</h3>
+                    <span class="breakdown-amount">0.8 BCH</span>
+                </div>
+                <p class="breakdown-description">Branding & design for BCH Live</p>
+            </div>
+            </div>
+            </div>
+            </section>
 
     <section id="benefits" class="section video-section">
         <div class="container">

@@ -533,7 +533,95 @@
         .benefit-card p {
             color: #6b7280;
             line-height: 1.6;
-        } </style>
+        }
+
+/* About Section Styles */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .about-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .about-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .about-logo.artistpro {
+            background: #000000;
+            color: white;
+        }
+
+        .about-logo.cryptominders {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            font-size: 2rem;
+        }
+
+        .about-info h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+
+        .about-experience {
+            color: #10b981;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .about-points {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-points li {
+            color: #6b7280;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .about-points li::before {
+            content: '•';
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+
+ </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -746,11 +834,42 @@
 </section>
 
     <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p class="section-description">ArtistPro & CryptoMinders - Coming Soon</p>
+    <div class="container">
+        <h2 class="section-title" id="about-title">About Us</h2>
+        
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-header">
+                    <div class="about-logo artistpro">AP</div>
+                    <div class="about-info">
+                        <h3 id="artistpro-name">ArtistPro</h3>
+                        <span class="about-experience" id="artistpro-exp">9 Years Experience</span>
+                    </div>
+                </div>
+                <ul class="about-points">
+                    <li id="artistpro-point1">9 Years Experience</li>
+                    <li id="artistpro-point2">Multimedia Production Specialist</li>
+                    <li id="artistpro-point3">2M+ Daily Reach</li>
+                </ul>
+            </div>
+            
+            <div class="about-card">
+                <div class="about-header">
+                    <div class="about-logo cryptominders">▶</div>
+                    <div class="about-info">
+                        <h3 id="cryptominders-name">CryptoMinders</h3>
+                        <span class="about-experience" id="cryptominders-exp">1+ Years, 300+ Videos</span>
+                    </div>
+                </div>
+                <ul class="about-points">
+                    <li id="cryptominders-point1">300+ BCH Videos</li>
+                    <li id="cryptominders-point2">Streaming Platform Creator</li>
+                    <li id="cryptominders-point3">Educational Content Expert</li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="faq" class="section video-section">
         <div class="container">

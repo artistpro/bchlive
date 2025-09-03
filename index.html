@@ -494,6 +494,45 @@
             color: #6b7280;
             font-size: 0.95rem;
             line-height: 1.5;
+        }
+        
+        /* Benefits Section Styles */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #ecfdf5, #fef3c7);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #6b7280;
+            line-height: 1.6;
         } </style>
 </head>
 <body>
@@ -675,11 +714,36 @@
             </section>
 
     <section id="benefits" class="section video-section">
-        <div class="container">
-            <h2 class="section-title">Sponsor Benefits</h2>
-            <p class="section-description">Premium visibility opportunities - Coming Soon</p>
+    <div class="container">
+        <h2 class="section-title" id="benefits-title">Sponsor Benefits</h2>
+        <p class="section-description" id="benefits-description">
+            Join BCH Live and get premium visibility in the BCH ecosystem:
+        </p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📺</div>
+                <h3 id="benefit-1-title">24/7 Brand Exposure</h3>
+                <p id="benefit-1-desc">Non-intrusive banner in all BCH Live streams</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🌍</div>
+                <h3 id="benefit-2-title">Social Media Mentions</h3>
+                <p id="benefit-2-desc">Featured in Twitter/X, Instagram, TikTok posts</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <h3 id="benefit-3-title">Monthly Reports</h3>
+                <p id="benefit-3-desc">Detailed metrics and impact analysis</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏆</div>
+                <h3 id="benefit-4-title">Community Recognition</h3>
+                <p id="benefit-4-desc">Acknowledged as BCH culture builder through BCH Live</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="about" class="section">
         <div class="container">

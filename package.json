@@ -1,0 +1,31 @@
+{
+  "name": "bch-live-crowdfunding",
+  "version": "1.0.0",
+  "description": "BCH Live - 24/7 Bitcoin Cash streaming channel crowdfunding landing page",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s .",
+    "build": "echo 'Static build - no build step needed'",
+    "dev": "serve -s ."
+  },
+  "keywords": [
+    "bitcoin-cash",
+    "bch",
+    "crowdfunding",
+    "streaming",
+    "cryptocurrency",
+    "live-stream"
+  ],
+  "author": "ArtistPro & CryptoMinders",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
